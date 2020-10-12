@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>This is the head of the page.</title>
+{% endblock%}
+
+{% block body %}
+    <p>This is the body of the page.</p>
+            {% for content in contents %}
+                <p>{{ content.name }}</p>
+                <p>{{ content.suggestion }}</p>
+                <p>Rating: {{ content.rating }}</p>
+                <a href='/vote/{{content.id}}'>Vote!</a>
+                <br>
+                <br>
+                <hr>
+            {% endfor %}
+        <a href='/new'>Add a new suggestion?</a>
+{% endblock %}

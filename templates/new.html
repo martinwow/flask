@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <p>Please insert a new suggestion.</p>
+{% endblock %}
+
+{% block body %}
+    <form method="post">
+        <label for="user_name">Name of user:</label><br>
+        <input type="text" id="user_name" name="user_name">
+        <label for="rest_name">Name of restaurant:</label>
+        <input type="text" id="rest_name" name="rest_name">
+        <input type="submit" value="Add">
+    </form>
+{% endblock %}
